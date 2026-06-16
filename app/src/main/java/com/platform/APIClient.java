@@ -106,7 +106,7 @@ public class APIClient {
         if (ActivityUTILS.isMainThread()) {
             throw new NetworkOnMainThreadException();
         }
-        boolean isTestNet = BuildConfig.LITECOIN_TESTNET;
+        boolean isTestNet = BuildConfig.AETHERIS_TESTNET;
         String lang = getCurrentLocale(ctx);
         Request request = locRequest
             .newBuilder()

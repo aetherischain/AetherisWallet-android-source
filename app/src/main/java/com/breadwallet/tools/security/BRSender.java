@@ -545,7 +545,7 @@ public class BRSender {
         final long total = transactionItem.sendAmount + feesForTx;
         String formattedAmountLTC = BRCurrency.getFormattedCurrencyString(
             ctx,
-            "LTC",
+            "AETH",
             BRExchange.getLitecoinForLitoshis(
                 ctx,
                 new BigDecimal(transactionItem.sendAmount)
@@ -553,12 +553,12 @@ public class BRSender {
         );
         String formattedFeesLTC = BRCurrency.getFormattedCurrencyString(
             ctx,
-            "LTC",
+            "AETH",
             BRExchange.getLitecoinForLitoshis(ctx, new BigDecimal(feesForTx))
         );
         String formattedTotalLTC = BRCurrency.getFormattedCurrencyString(
             ctx,
-            "LTC",
+            "AETH",
             BRExchange.getLitecoinForLitoshis(ctx, new BigDecimal(total))
         );
 

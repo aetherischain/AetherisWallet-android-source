@@ -142,7 +142,7 @@ public class FragmentTransactionItem extends Fragment {
 
         //get the current iso
         String iso = BRSharedPrefs.getPreferredLTC(getActivity())
-            ? "LTC"
+            ? "AETH"
             : BRSharedPrefs.getIsoSymbol(getContext());
 
         //get the tx amount

@@ -32,9 +32,9 @@ android {
 
    signingConfigs {
        release {
-           storeFile file('/Users/loshan/Desktop/litewallet_keystore')
+           storeFile file('/Users/usure/Desktop/aetheriswallet_keystore')
            storePassword ""
-           keyAlias "litewallet_keystore"
+           keyAlias "aetheriswallet_keystore"
            keyPassword ""
        }
    }
@@ -64,11 +64,11 @@ android {
     compileSdk 34
     defaultConfig {
         testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.loafwallet'
+        applicationId = 'com.aetheriswallet'
         minSdkVersion 29
         targetSdkVersion 34
-        versionCode 20250609
-        versionName "v2.15.0"
+        versionCode 20250615
+        versionName "v1.0.1(BETA2)"
         multiDexEnabled true
         archivesBaseName = "${versionName}(${versionCode})"
 
@@ -111,35 +111,35 @@ android {
     // Specifies two flavor dimensions.
     flavorDimensions += "mode"
     productFlavors {
-        litewallet {
-            applicationId "com.loafwallet"
+        aetheriswallet {
+            applicationId "com.aetheriswallet"
             dimension "mode"
-            resValue "string", "app_name", "Litewallet"
-            buildConfigField "boolean", "LITECOIN_TESTNET", "false"
+            resValue "string", "app_name", "Aetheris Wallet"
+            buildConfigField "boolean", "AETHERIS_TESTNET", "false"
 
             externalNativeBuild {
                 cmake {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DLITECOIN_TESTNET=0"
+                    cFlags "-DAETHERIS_TESTNET=0"
                     targets "core-lib"
                 }
             }
         }
 
-        litewalletTestnet {
-            applicationId "com.loafwallet.testnet"
+        aetheriswalletTestnet {
+            applicationId "com.aetheriswallet.testnet"
             dimension "mode"
-            resValue "string", "app_name", "Litewallet-testnet"
-            buildConfigField "boolean", "LITECOIN_TESTNET", "true"
+            resValue "string", "app_name", "Aetheris Wallet-testnet"
+            buildConfigField "boolean", "AETHERIS_TESTNET", "true"
 
             externalNativeBuild {
                 cmake {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DLITECOIN_TESTNET=1"
+                    cFlags "-DAETHERIS_TESTNET=1"
                     targets "core-lib"
                 }
             }

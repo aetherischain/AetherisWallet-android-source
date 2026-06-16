@@ -33,7 +33,7 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
 
     public ImportPrivKeyTask(Activity activity) {
         app = activity;
-        UNSPENT_URL = BuildConfig.LITECOIN_TESTNET
+        UNSPENT_URL = BuildConfig.AETHERIS_TESTNET
             ? "https://chain.so/tx/LTCTEST/"
             : "https://blockchair.com/litecoin/transaction/";
     }
@@ -85,10 +85,10 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
 
         String sentBits = BRCurrency.getFormattedCurrencyString(
             app,
-            "LTC",
+            "AETH",
             BRExchange.getAmountFromLitoshis(
                 app,
-                "LTC",
+                "AETH",
                 new BigDecimal(importPrivKeyEntity.getAmount())
             )
         );
@@ -96,10 +96,10 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
 
         String feeBits = BRCurrency.getFormattedCurrencyString(
             app,
-            "LTC",
+            "AETH",
             BRExchange.getAmountFromLitoshis(
                 app,
-                "LTC",
+                "AETH",
                 new BigDecimal(importPrivKeyEntity.getFee())
             )
         );
@@ -192,7 +192,13 @@ public class ImportPrivKeyTask extends AsyncTask<String, String, String> {
         ImportPrivKeyEntity result = null;
         JSONArray jsonArray = null;
         try {
-            jsonArray = new JSONArray(jsonString);
+            String trimmedJson = jsonString.trim();
+            if (trimmedJson.startsWith("[")) {
+                jsonArray = new JSONArray(trimmedJson);
+            } else {
+                Timber.d("timber: ImportPrivKeyTask: Unexpected response: %s", jsonString);
+                return null;
+            }
             int length = jsonArray.length();
             if (length > 0) BRWalletManager.getInstance().createInputArray();
 

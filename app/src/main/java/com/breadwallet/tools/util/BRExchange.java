@@ -17,7 +17,7 @@ public class BRExchange {
 
     public static BigDecimal getMaxAmount(Context context, String iso) {
         final long MAX_LTC = 84000000;
-        if (iso.equalsIgnoreCase("LTC"))
+        if (iso.equalsIgnoreCase("AETH"))
             return getLitecoinForLitoshis(context, new BigDecimal(MAX_LTC * 100000000));
         CurrencyEntity ent = CurrencyDataSource.getInstance(context).getCurrencyByIso(iso);
         if (ent == null) return new BigDecimal(Integer.MAX_VALUE);
@@ -62,7 +62,7 @@ public class BRExchange {
     //get an iso amount from litoshis
     public static BigDecimal getAmountFromLitoshis(Context app, String iso, BigDecimal amount) {
         BigDecimal result;
-        if (iso.equalsIgnoreCase("LTC")) {
+        if (iso.equalsIgnoreCase("AETH")) {
             result = getLitecoinForLitoshis(app, amount);
         } else {
             //multiply by 100 because core function localAmount accepts the smallest amount e.g. cents
@@ -98,7 +98,7 @@ public class BRExchange {
     //get litoshis from an iso symbol amount
     public static BigDecimal getLitoshisFromAmount(Context app, String iso, BigDecimal amount) {
         BigDecimal result;
-        if (iso.equalsIgnoreCase("LTC")) {
+        if (iso.equalsIgnoreCase("AETH")) {
             result = BRExchange.getLitoshisForLitecoin(app, amount);
         } else {
             //multiply by 100 because core function localAmount accepts the smallest amount e.g. cents

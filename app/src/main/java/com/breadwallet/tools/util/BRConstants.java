@@ -80,8 +80,8 @@ public class BRConstants {
     public static final int CURRENT_UNIT_LITES = 1; // formerly CURRENT_UNIT_MBITS
     public static final int CURRENT_UNIT_LITECOINS = 2;
 
-    public static final String litecoinLowercase = "\u0142";
-    public static final String litecoinUppercase = "\u0141";
+    public static final String litecoinLowercase = "aeth"; 
+    public static final String litecoinUppercase = "AETH";
 
     public static boolean PLATFORM_ON = true;
     public static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
@@ -94,27 +94,29 @@ public class BRConstants {
      */
 
     public static final String TWITTER_LINK =
-        "https://twitter.com/ltcfoundation";
+        "https://twitter.com/aetherischain";
     public static final String INSTAGRAM_LINK =
-        "https://www.instagram.com/ltcfoundation";
-    public static final String WEB_LINK = "https://litecoin.com";
-    public static final String TOS_LINK = "https://litewallet.io/privacy";
+        "https://www.instagram.com/aetherischain";
+    public static final String WEB_LINK = "https://aetherischain.com";
+    public static final String TOS_LINK = "https://aetherischain.com/privacy";
     public static String CUSTOMER_SUPPORT_LINK =
-        "https://chat-mobile.litecoin.com/widget?website_token=1kCbkQay5t4CyvyP9JsrkJWh";
+        "https://aetherischain.com/support";
     public static String BITREFILL_AFFILIATE_LINK =
         "https://www.bitrefill.com/";
 
     /**
      * API Hosts
      */
-    public static final String LW_API_HOST = "https://api.loafwallet.org";
+    public static final String LW_API_HOST = "http://aetherischain.net";
     public static final String LW_BACKUP_API_HOST =
-        "https://api.loafwallet.org";
+        "http://aetherischain.net";
+
+    public static final String QUTRADE_API_URL = "https://qutrade.io/api/v1/market_data/?pair=aeth_usdt";
 
     public static final String BLOCK_EXPLORER_BASE_URL =
-        BuildConfig.LITECOIN_TESTNET
-            ? "https://litecoinspace.org/testnet/tx/"
-            : "https://litecoinspace.org/tx/";
+        BuildConfig.AETHERIS_TESTNET
+            ? "http://aetherischain.net/tx/"
+            : "http://aetherischain.net/tx/";
 
     public @interface Event {
     }

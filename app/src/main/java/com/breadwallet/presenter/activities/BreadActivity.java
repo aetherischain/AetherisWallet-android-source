@@ -56,6 +56,7 @@ import com.breadwallet.tools.util.Utils;
 import com.breadwallet.wallet.BRPeerManager;
 import com.breadwallet.wallet.BRWalletManager;
 import com.google.android.gms.tasks.Task;
+import androidx.browser.customtabs.CustomTabsIntent;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
@@ -253,7 +254,7 @@ public class BreadActivity
         Uri data = intent.getData();
         if (data == null) return;
         String scheme = data.getScheme();
-        if (scheme != null && scheme.startsWith("litecoin")) {
+        if (scheme != null && scheme.startsWith("aetheris")) {
             String str = intent.getDataString();
             BitcoinUrlHandler.processRequest(this, str);
         }
@@ -300,12 +301,13 @@ public class BreadActivity
             }
             mSelectedBottomNavItem = 0;
         } else if (menuItemId == R.id.nav_buy) {
-            ExtensionKt.replaceFragment(
-                BreadActivity.this,
-                new BuyTabFragment(),
-                false,
-                R.id.fragment_container
-            );
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(this, Uri.parse("https://qutrade.io"));
+            return false;
+        } else if (menuItemId == R.id.nav_stake) {
+            Toast.makeText(this, "Coming soon - Still working on it", Toast.LENGTH_SHORT).show();
+            return false;
         }
         return true;
     }
@@ -565,7 +567,7 @@ public class BreadActivity
                     BRSharedPrefs.getCatchedBalance(BreadActivity.this)
                 );
 
-                //amount in LTC units
+                //amount in AETH units
                 BigDecimal btcAmount = BRExchange.getLitecoinForLitoshis(
                     BreadActivity.this,
                     amount
@@ -573,7 +575,7 @@ public class BreadActivity
                 final String formattedBTCAmount =
                     BRCurrency.getFormattedCurrencyString(
                         BreadActivity.this,
-                        "LTC",
+                        "AETH",
                         btcAmount
                     );
 

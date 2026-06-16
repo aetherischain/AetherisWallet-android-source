@@ -15,7 +15,7 @@ class UDResolution {
 
     fun resolve(domain: String): ResolutionResult {
         return try {
-            ResolutionResult(null, tool.getAddress(domain, "LTC"))
+            ResolutionResult(null, tool.getAddress(domain, "AETH"))
         } catch (err: NamingServiceException) {
             Timber.e(err)
             ResolutionResult(err, null)

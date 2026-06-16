@@ -17,7 +17,7 @@
 
 #define fprintf(...) __android_log_print(ANDROID_LOG_ERROR, "bread", _va_rest(__VA_ARGS__, NULL))
 
-#if LITECOIN_TESTNET
+#if AETHERIS_TESTNET
 #define BR_CHAIN_PARAMS BRTestNetParams
 #else
 #define BR_CHAIN_PARAMS BRMainNetParams
@@ -476,4 +476,33 @@ JNIEXPORT void JNICALL Java_com_breadwallet_wallet_BRPeerManager_peerManagerFree
         free(_peers);
         _peers = NULL;
     }
+}
+
+JNIEXPORT jobjectArray JNICALL Java_com_breadwallet_wallet_BRPeerManager_getConnectedPeers(JNIEnv *env, jobject thiz) {
+    if (!_peerManager) return NULL;
+
+    size_t count = BRPeerManagerPeerCount(_peerManager);
+    jobjectArray peerObjectArray = (*env)->NewObjectArray(env, (jsize) count, _peerClass, 0);
+
+    for (size_t i = 0; i < count; i++) {
+        BRPeer p = BRPeerManagerConnectedPeer(_peerManager, i);
+        jbyteArray peerAddress = (*env)->NewByteArray(env, sizeof(p.address));
+        jbyteArray peerPort = (*env)->NewByteArray(env, sizeof(p.port));
+        jbyteArray peerTimeStamp = (*env)->NewByteArray(env, sizeof(p.timestamp));
+
+        (*env)->SetByteArrayRegion(env, peerAddress, 0, sizeof(p.address), (jbyte *) &p.address);
+        (*env)->SetByteArrayRegion(env, peerPort, 0, sizeof(p.port), (jbyte *) &p.port);
+        (*env)->SetByteArrayRegion(env, peerTimeStamp, 0, sizeof(p.timestamp), (jbyte *) &p.timestamp);
+
+        jmethodID mid = (*env)->GetMethodID(env, _peerClass, "<init>", "([B[B[B)V");
+        jobject peerObject = (*env)->NewObject(env, _peerClass, mid, peerAddress, peerPort, peerTimeStamp);
+        (*env)->SetObjectArrayElement(env, peerObjectArray, (jsize) i, peerObject);
+
+        (*env)->DeleteLocalRef(env, peerAddress);
+        (*env)->DeleteLocalRef(env, peerPort);
+        (*env)->DeleteLocalRef(env, peerTimeStamp);
+        (*env)->DeleteLocalRef(env, peerObject);
+    }
+
+    return peerObjectArray;
 }

@@ -4,7 +4,7 @@
     <!-- About screen blog label -->
     <string name="About.blog">Website</string>
     <!-- About screen footer -->
-    <string name="About.footer">Made by the Litewallet Team of the Litecoin Foundation\n%1$s</string>
+    <string name="About.footer">Made by the Aetheris Wallet Team of the Aetheris Foundation\n%1$s</string>
     <!-- About app version -->
     <string name="About.appVersion" translatable="false">%1$s</string>
     <!-- Privay Policy button label -->
@@ -24,15 +24,15 @@
     <!-- Loading Wallet Message -->
     <string name="Account.loadingMessage">Loading Wallet</string>
     <!-- Default wallet name -->
-    <string name="AccountHeader.defaultWalletName">My Litewallet</string>
+    <string name="AccountHeader.defaultWalletName">My Aetheris Wallet</string>
     <!-- Third party keyboard warning -->
     <string name="Alert.customKeyboard.android">It looks like you are using a third-party keyboard, which can record what you type and steal your Paper Key. Please switch to the default Android keyboard for extra protection.</string>
     <!-- Error alert title -->
     <string name="Alert.error">Error</string>
     <!-- Keystore error -->
-    <string name="Alert.keystore.generic.android">There is a problem with your Android OS keystore, please contact contact@litecoin.net</string>
+    <string name="Alert.keystore.generic.android">There is a problem with your Android OS keystore, please contact contact@aetherischain.com</string>
     <!-- KeyStore error, keys are invalidated -->
-    <string name="Alert.keystore.invalidated.android">Your Litewallet encrypted data was recently invalidated because your Android lock screen was disabled.</string>
+    <string name="Alert.keystore.invalidated.android">Your Aetheris Wallet encrypted data was recently invalidated because your Android lock screen was disabled.</string>
     <!-- Keystore error title -->
     <string name="Alert.keystore.title.android">Android KeyStore Error</string>
     <!-- No internet alert message -->
@@ -103,14 +103,14 @@
     <string name="ConfirmPaperPhrase.label">To make sure everything was written down correctly, please enter the following words from your paper key.</string>
     <!-- Word label eg. Word #1, Word #2 -->
     <string name="ConfirmPaperPhrase.word">Word #%1$s</string>
-    <!-- Litecoin denomination picker label -->
-    <string name="DefaultCurrency.litecoinLabel">Litecoin Display Unit</string>
+    <!-- Aetheris denomination picker label -->
+    <string name="DefaultCurrency.litecoinLabel">Aetheris Display Unit</string>
     <!-- Exchange rate label -->
     <string name="DefaultCurrency.rateLabel">Exchange Rate</string>
     <!-- Email unavailable alert title -->
     <!-- Email unavailable alert title -->
     <!-- Message that gets shown when we've detected the user has encountered the looping lock-screen bug. (preserve [ ] characters) -->
-    <string name="ErrorMessages.loopingLockScreen.android">Litewallet can not be authenticated due to a bug in your version of Android. [Please tap here for more information.]</string>
+    <string name="ErrorMessages.loopingLockScreen.android">Aetheris Wallet can not be authenticated due to a bug in your version of Android. [Please tap here for more information.]</string>
     <!-- Messaging unavailable alert title -->
     <string name="ErrorMessages.messagingUnavailableMessage">This device isn\'t configured to send messages.</string>
     <!-- Messaging unavailable alert title -->
@@ -134,7 +134,7 @@
     <!-- Checking private key balance progress view text -->
     <string name="Import.checking">Checking private key balance...</string>
     <!-- Sweep private key confirmation message -->
-    <string name="Import.confirm">Send %1$s from this private key into your wallet? The Litecoin network will receive a fee of %2$s.</string>
+    <string name="Import.confirm">Send %1$s from this private key into your wallet? The Aetheris network will receive a fee of %2$s.</string>
     <!-- Duplicate key error message -->
     <string name="Import.Error.duplicate">This private key is already in your wallet.</string>
     <!-- empty private key error message -->
@@ -152,13 +152,13 @@
     <!-- Caption for graphics -->
     <string name="Import.leftCaption">Wallet to be imported</string>
     <!-- Import wallet intro screen message -->
-    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your Litewallet using a single transaction.</string>
+    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your Aetheris Wallet using a single transaction.</string>
     <!-- Enter password alert view title -->
     <string name="Import.password">This private key is password protected.</string>
     <!-- password textfield placeholder -->
     <string name="Import.passwordPlaceholder">password</string>
     <!-- Caption for graphics -->
-    <string name="Import.rightCaption">Your Litewallet</string>
+    <string name="Import.rightCaption">Your Aetheris Wallet</string>
     <!-- Scan Private key button label -->
     <string name="Import.scan">Scan Private Key</string>
     <!-- Import wallet success alert title -->
@@ -176,15 +176,15 @@
     <!-- Ignore jailbreak warning button -->
     <string name="JailbreakWarnings.ignore">Ignore</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access keychain data and steal your Litecoin! Wipe this wallet immediately and restore on a secure device.</string>
+    <string name="JailbreakWarnings.messageWithBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access keychain data and steal your Aetheris! Wipe this wallet immediately and restore on a secure device.</string>
     <!-- Jailbreak warning message -->
-    <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access  keychain data and steal your Litecoin. Please only use Litewallet on a non-jailbroken device.</string>
+    <string name="JailbreakWarnings.messageWithoutBalance">DEVICE SECURITY COMPROMISED\n Any \'jailbreak\' app can access  keychain data and steal your Aetheris. Please only use Aetheris Wallet on a non-jailbroken device.</string>
     <!-- Jailbreak warning title -->
     <string name="JailbreakWarnings.title">WARNING</string>
     <!-- Location services disabled error -->
     <string name="LocationPlugin.disabled">Location services are disabled.</string>
     <!-- No permissions for location services -->
-    <string name="LocationPlugin.notAuthorized">Litewallet does not have permission to access location services.</string>
+    <string name="LocationPlugin.notAuthorized">Aetheris Wallet does not have permission to access location services.</string>
     <!-- Wallet creation date prefix -->
     <string name="ManageWallet.creationDatePrefix">You created your wallet on %1$s</string>
     <!-- Manage wallet description text -->
@@ -193,7 +193,7 @@
     <string name="ManageWallet.textFieldLabel">Wallet Name</string>
     <!-- Manage wallet modal title -->
     <string name="ManageWallet.title">Manage Wallet</string>
-    <!-- Buy litecoin title -->
+    <!-- Buy Aetheris title -->
     <string name="MenuButton.buy">Buy</string>
     <!-- Menu button title -->
     <string name="MenuButton.lock">Lock Wallet</string>
@@ -226,7 +226,7 @@
     <!-- Node status label -->
     <string name="NodeSelector.statusLabel">Node Connection Status</string>
     <!-- Node Selector view title -->
-    <string name="NodeSelector.title">Litecoin Nodes</string>
+    <string name="NodeSelector.title">Aetheris Nodes</string>
     <!-- Bad Payment request alert title -->
     <string name="PaymentProtocol.Errors.badPaymentRequest">Bad Payment Request</string>
     <!-- Error opening payment protocol file message -->
@@ -238,9 +238,9 @@
     <!-- Payment too small alert title -->
     <string name="PaymentProtocol.Errors.smallOutputError">Couldn\'t make payment</string>
     <!-- Amount too small error message -->
-    <string name="PaymentProtocol.Errors.smallPayment">Litecoin payments can\'t be less than %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallPayment">Aetheris payments can\'t be less than %1$s.</string>
     <!-- Output too small error message. -->
-    <string name="PaymentProtocol.Errors.smallTransaction">Litecoin transaction outputs can\'t be less than %1$s.</string>
+    <string name="PaymentProtocol.Errors.smallTransaction">Aetheris transaction outputs can\'t be less than %1$s.</string>
     <!-- Unsupported signature type payment protocol error message -->
     <string name="PaymentProtocol.Errors.unsupportedSignatureType">unsupported signature type</string>
     <!-- Untrusted certificate payment protocol error message -->
@@ -262,7 +262,7 @@
     <!-- Transaction rejected prompt title -->
     <string name="Prompts.RecommendRescan.title">Transaction Rejected</string>
     <!-- Share data prompt body -->
-    <string name="Prompts.ShareData.body">Help improve Litewallet by sharing your anonymous data with us</string>
+    <string name="Prompts.ShareData.body">Help improve Aetheris Wallet by sharing your anonymous data with us</string>
     <!-- Share data prompt title -->
     <string name="Prompts.ShareData.title">Share Anonymous Data</string>
     <!-- Enable touch ID prompt body -->
@@ -276,11 +276,11 @@
     <!-- Button on fingerprint prompt so the user can enter their PIN instead -->
     <string name="Prompts.TouchId.usePin.android">PIN</string>
     <!-- Upgrade PIN prompt body. -->
-    <string name="Prompts.UpgradePin.body">Litewallet has upgraded to using a 6-digit PIN. Tap here to upgrade.</string>
+    <string name="Prompts.UpgradePin.body">Aetheris Wallet has upgraded to using a 6-digit PIN. Tap here to upgrade.</string>
     <!-- Upgrade PIN prompt title. -->
     <string name="Prompts.UpgradePin.title">Upgrade PIN</string>
     <!-- Notifications will be added later but users can set their preferences now, which is why we specify "in the future". -->
-    <string name="PushNotifications.body">Turn on notifications to receive special messages from Litewallet in the future.</string>
+    <string name="PushNotifications.body">Turn on notifications to receive special messages from Aetheris Wallet in the future.</string>
     <!-- Push notifications toggle switch label -->
     <string name="PushNotifications.label">Push Notifications</string>
     <!-- Push notifications are off label -->
@@ -310,7 +310,7 @@
     <!-- Enter paper key instruction -->
     <string name="RecoverWallet.instruction">Enter Paper Key</string>
     <!-- Recover wallet intro -->
-    <string name="RecoverWallet.intro">Recover your Litewallet with your paper key.</string>
+    <string name="RecoverWallet.intro">Recover your Aetheris Wallet with your paper key.</string>
     <!-- Invalid paper key message -->
     <string name="RecoverWallet.invalid">The paper key you entered is invalid. Please double-check each word and try again.</string>
     <!-- Previous button accessibility label -->
@@ -327,7 +327,7 @@
     <string name="RecoverWallet.subheader_reset_pin">To reset your PIN, enter the words from your paper key into the boxes below.</string>
     <!-- No amount entered error message. -->
     <string name="RequestAnAmount.noAmount">Please enter an amount first.</string>
-    <!-- Request a specific amount of litecoin -->
+    <!-- Request a specific amount of Aetheris -->
     <string name="RequestAnAmount.title">Request an Amount</string>
     <!-- Alert action button label -->
     <string name="ReScan.alertAction">Sync</string>
@@ -338,7 +338,7 @@
     <!-- extimated time -->
     <string name="ReScan.body1">20-45 minutes</string>
     <!-- Syncing explanation -->
-    <string name="ReScan.body2">If a transaction shows as completed on the Litecoin network but not in your Litewallet.</string>
+    <string name="ReScan.body2">If a transaction shows as completed on the Aetheris network but not in your Aetheris Wallet.</string>
     <!-- Syncing explanation -->
     <string name="ReScan.body3">You repeatedly get an error saying your transaction was rejected.</string>
     <!-- Start Sync button label -->
@@ -351,7 +351,7 @@
     <string name="ReScan.subheader1">Estimated time</string>
     <!-- Subheader label -->
     <string name="ReScan.subheader2">When to Sync?</string>
-    <!-- Scan litecoin address camera flash toggle -->
+    <!-- Scan Aetheris address camera flash toggle -->
     <string name="Scanner.flashButtonLabel">Camera Flash</string>
     <!-- Complete filter label -->
     <string name="Search.complete">complete</string>
@@ -364,17 +364,17 @@
     <!-- Security Center Info -->
     <string name="SecurityCenter.info">Enable all security features for maximum protection.</string>
     <!-- Paper Key button description -->
-    <string name="SecurityCenter.paperKeyDescription">The only way to access your Litecoin if you lose or upgrade your phone.</string>
+    <string name="SecurityCenter.paperKeyDescription">The only way to access your Aetheris if you lose or upgrade your phone.</string>
     <!-- Paper Key button title -->
     <string name="SecurityCenter.paperKeyTitle">Paper Key</string>
     <!-- PIN button description -->
-    <string name="SecurityCenter.pinDescription">Protects your Litewallet from unauthorized users.</string>
+    <string name="SecurityCenter.pinDescription">Protects your Aetheris Wallet from unauthorized users.</string>
     <!-- PIN button title -->
     <string name="SecurityCenter.pinTitle">6-Digit PIN</string>
     <!-- Security Center Title -->
     <string name="SecurityCenter.title">Security Center</string>
     <!-- Touch ID button description -->
-    <string name="SecurityCenter.touchIdDescription">Conveniently unlock your Litewallet and send money up to a set limit.</string>
+    <string name="SecurityCenter.touchIdDescription">Conveniently unlock your Aetheris Wallet and send money up to a set limit.</string>
     <!-- Touch ID button title -->
     <string name="SecurityCenter.touchIdTitle">Touch ID</string>
     <!-- Security center fingerprint authentication button -->
@@ -384,13 +384,13 @@
     <!-- Balance: $4.00 -->
     <string name="Send.balance">Balance: %1$s</string>
     <!-- Instructions how to allow the camera access for the app -->
-    <string name="Send.cameraUnavailabeMessage.android">Allow camera access in \"Settings\" &gt; \"Apps\" &gt; \"Litewallet\" &gt; \"Permissions\"</string>
+    <string name="Send.cameraUnavailabeMessage.android">Allow camera access in \"Settings\" &gt; \"Apps\" &gt; \"Aetheris Wallet\" &gt; \"Permissions\"</string>
     <!-- Permission required to access camera -->
-    <string name="Send.cameraUnavailabeTitle.android">Litewallet is not allowed to access the camera</string>
+    <string name="Send.cameraUnavailabeTitle.android">Aetheris Wallet is not allowed to access the camera</string>
     <!-- Camera not allowed message -->
     <string name="Send.cameraunavailableMessage">Go to Settings to allow camera access.</string>
     <!-- Camera not allowed alert title -->
-    <string name="Send.cameraUnavailableTitle">Litewallet is not allowed to access the camera</string>
+    <string name="Send.cameraUnavailableTitle">Aetheris Wallet is not allowed to access the camera</string>
     <!-- Warning when sending to self. -->
     <string name="Send.containsAddress">The destination is your own address. You cannot send to yourself.</string>
     <!-- Could not create transaction alert title -->
@@ -404,9 +404,9 @@
     <!-- Payee identity not certified alert title. -->
     <string name="Send.identityNotCertified">Payee identity isn\'t certified.</string>
     <!-- Invalid address alert message -->
-    <string name="Send.invalidAddressMessage">The destination address is not a valid Litecoin address.</string>
+    <string name="Send.invalidAddressMessage">The destination address is not a valid Aetheris address.</string>
     <!-- Invalid address on pasteboard message -->
-    <string name="Send.invalidAddressOnPasteboard">Pasteboard does not contain a valid Litecoin address.</string>
+    <string name="Send.invalidAddressOnPasteboard">Pasteboard does not contain a valid Aetheris address.</string>
     <!-- Invalid address alert title -->
     <string name="Send.invalidAddressTitle">Invalid Address</string>
     <!-- Is rescanning error message -->
@@ -430,9 +430,9 @@
     <!-- Send screen title (as in "this is the screen for sending money") -->
     <string name="Send.title">Send</string>
     <!-- Send money to label -->
-    <string name="Send.toLabel">Enter a Litecoin address</string>
+    <string name="Send.toLabel">Enter an Aetheris address</string>
 
-    <!-- Enter to match domain name to LTC Address -->
+    <!-- Enter to match domain name to AETH Address -->
     <string name="Send.UnstoppableDomains.placeholder">Enter a .crypto, .wallet, .zil, .nft, .blockchain,\n.bitcoin, .coin, .888, .dao, or .x domain.</string>
     <!-- Or -->
     <string name="Send.or">Or</string>
@@ -442,7 +442,7 @@
     <string name="Send.UnstoppableDomains.domainResolved">Your address was resolved!</string>
 
     <!-- Address already used alert message - first part -->
-    <string name="Send.UsedAddress.firstLine">Litecoin addresses are intended for single use only.</string>
+    <string name="Send.UsedAddress.firstLine">Aetheris addresses are intended for single use only.</string>
     <!-- Address already used alert message - second part -->
     <string name="Send.UsedAddress.secondLIne">Re-use reduces privacy for both you and the recipient and can result in loss if the recipient doesn\'t directly control the address.</string>
     <!-- Address already used alert title -->
@@ -456,7 +456,7 @@
     <!-- Join Early access label -->
     <string name="Settings.earlyAccess">Join Early Access</string>
     <!-- Are you enjoying loaf alert message body -->
-    <string name="Settings.enjoying">Are you enjoying Litewallet?</string>
+    <string name="Settings.enjoying">Are you enjoying Aetheris Wallet?</string>
     <!-- Import wallet label -->
     <string name="Settings.importTitle">Import Wallet</string>
     <!-- Manage settings section header -->
@@ -480,7 +480,7 @@
     <!-- Start or recover another wallet menu label. -->
     <string name="Settings.wipe">Start/Recover Another Wallet</string>
     <!-- Share data view body -->
-    <string name="ShareData.body">Help improve Litewallet by sharing your anonymous data with us. This does not include any financial information. We respect your financial privacy.</string>
+    <string name="ShareData.body">Help improve Aetheris Wallet by sharing your anonymous data with us. This does not include any financial information. We respect your financial privacy.</string>
     <!-- Share data header -->
     <string name="ShareData.header">Share Data?</string>
     <!-- Share data switch label. -->
@@ -488,13 +488,13 @@
     <!-- button label -->
     <string name="StartPaperPhrase.againButtonTitle">Write Down Paper Key Again</string>
     <!-- Paper key explanation text. -->
-    <string name="StartPaperPhrase.body">Your paper key is the only way to restore your Litewallet if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.</string>
+    <string name="StartPaperPhrase.body">Your paper key is the only way to restore your Aetheris Wallet if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.</string>
     <!-- button label -->
     <string name="StartPaperPhrase.buttonTitle">Write Down Paper Key</string>
     <!-- Argument is date -->
     <string name="StartPaperPhrase.date">You last wrote down your paper key on %1$s</string>
     <!-- Start view message -->
-    <string name="StartViewController.message">The most secure and safest way to use Litecoin.</string>
+    <string name="StartViewController.message">Control yourself. Send, receive &amp; hodl Aetheris quickly, easily &amp; safely.</string>
     <!-- Syncing view connectiong state header text -->
     <string name="SyncingView.connecting">Connecting</string>
     <!-- Syncing view header text -->
@@ -520,14 +520,14 @@
     <!-- Fingerprint Is Not Setup -->
     <string name="TouchIdSettings.disabledWarning.title.android">Fingerprint Authentication Not Enabled</string>
     <!-- Touch Id screen label -->
-    <string name="TouchIdSettings.label">Use your fingerprint to unlock your Litewallet and send money up to a set limit.</string>
+    <string name="TouchIdSettings.label">Use your fingerprint to unlock your Aetheris Wallet and send money up to a set limit.</string>
     <!-- Link Text (see TouchIdSettings.customizeText) -->
     <string name="TouchIdSettings.linkText">Touch ID Spending Limit Screen</string>
     <!-- Spending Limit: b100,000 ($100) -->
     <string name="TouchIdSettings.spendingLimit">Spending limit: %1$s (%2$s)</string>
     <!-- Touch id switch label. -->
-    <string name="TouchIdSettings.switchLabel">Enable Touch ID for Litewallet</string>
-    <!-- Enable fingerprint for this wallet called Litewallet -->
+    <string name="TouchIdSettings.switchLabel">Enable Touch ID for Aetheris Wallet</string>
+    <!-- Enable fingerprint for this wallet called Aetheris Wallet -->
     <string name="TouchIdSettings.switchLabel.android">Enable Fingerprint Authentication</string>
     <!-- Touch ID settings view title -->
     <string name="TouchIdSettings.title">Touch ID</string>
@@ -604,7 +604,7 @@
     <!-- "Sent [$5] to [address]" => This is the "to [address]" part. -->
     <string name="TransactionDetails.to">to %1$s</string>
     <!-- Transaction ID header -->
-    <string name="TransactionDetails.txHashHeader">Litecoin Transaction ID</string>
+    <string name="TransactionDetails.txHashHeader">Aetheris Transaction ID</string>
     <!-- (this transaction was) Received at this address: -->
     <string name="TransactionDirection.address">Received at this Address</string>
     <!-- (this transaction was) Sent to this address: -->
@@ -622,7 +622,7 @@
     <!-- Instruction to touch the sensor for fingerprint authentication -->
     <string name="UnlockScreen.touchIdInstructions.android">Touch Sensor</string>
     <!-- TouchID prompt text -->
-    <string name="UnlockScreen.touchIdPrompt">Unlock your Litewallet.</string>
+    <string name="UnlockScreen.touchIdPrompt">Unlock your Aetheris Wallet.</string>
     <!-- Device authentication body -->
     <string name="UnlockScreen.touchIdPrompt.android">Please unlock your Android device to continue.</string>
     <!-- Unlock with TouchID accessibility label -->
@@ -636,9 +636,9 @@
     <!-- Forget Seed Phrase or PIN -->
     <string name="UnlockScreen.forgetSeedPhraseOrPIN">Forget your seed Phrase or PIN?</string>
   <!-- Update PIN caption text -->
-    <string name="UpdatePin.caption">Remember this PIN. If you forget it, you won\'t be able to access your Litecoin.</string>
+    <string name="UpdatePin.caption">Remember this PIN. If you forget it, you won\'t be able to access your Aetheris.</string>
     <!-- PIN creation info. -->
-    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your Litewallet and send money.</string>
+    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your Aetheris Wallet and send money.</string>
     <!-- Update PIN title -->
     <string name="UpdatePin.createTitle">Set PIN</string>
     <!-- Update PIN title -->
@@ -672,7 +672,7 @@
     <!-- Authorize transaction with touch id message -->
     <string name="VerifyPin.touchIdMessage">Authorize this transaction</string>
     <!-- 'No wallet' warning for watch app -->
-    <string name="Watch.noWalletWarning">Open the Litewallet iPhone app to set up your wallet.</string>
+    <string name="Watch.noWalletWarning">Open the Aetheris Wallet iPhone app to set up your wallet.</string>
     <!-- Dismiss button label -->
     <string name="Webview.dismiss">Dismiss</string>
     <!-- Webview loading error message -->
@@ -680,9 +680,9 @@
     <!-- Updating webview message -->
     <string name="Webview.updating">Updating...</string>
     <!-- Welcome screen text. (?) will be replaced with the help icon users should look for. -->
-    <string name="Welcome.body">Litewallet has just updated! \nIf you need help, look for the (?) in the top right of most screens.</string>
+    <string name="Welcome.body">Aetheris Wallet has just updated! \nIf you need help, look for the (?) in the top right of most screens.</string>
     <!-- Top title of welcome screen -->
-    <string name="Welcome.title">Welcome to Litewallet!</string>
+    <string name="Welcome.title">Welcome to Aetheris Wallet!</string>
     <!-- Wipe wallet alert message -->
     <string name="WipeWallet.alertMessage">Are you sure you want to delete this wallet?</string>
     <!-- Wipe wallet alert title -->
@@ -694,7 +694,7 @@
     <!-- Enter phrase to wipe wallet instruction. -->
     <string name="WipeWallet.instruction">To start a new wallet or restore an existing wallet, you must first erase the wallet that is currently installed. To continue, enter the current wallet\'s Paper Key.</string>
     <!-- Start wipe wallet view message -->
-    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different Litewallet on this device.</string>
+    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different Aetheris Wallet on this device.</string>
     <!-- Start wipe wallet view warning -->
     <string name="WipeWallet.startWarning">Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Paper Key.</string>
     <!-- Wipe wallet navigation item title. -->
@@ -712,7 +712,7 @@
     <!-- 1 of 3 -->
     <string name="WritePaperPhrase.step">%1$d of %2$d</string>
 
-    <string name="Donate.title">Donate to the Litecoin Foundation (%1$s)</string>
+    <string name="Donate.title">Donate to the Aetheris Foundation (%1$s)</string>
     <string name="Confirmation.processingAndDonationTime">Processing time: These transactions will take %1$s minutes to process.</string>
     <string name="Donate.title.confirmation">Confirm Donation</string>
     <string name="Confirmation.donateLabel">Amount to Donate:</string>
@@ -725,7 +725,7 @@
     <!--Buy center - partners-->
 
     <string name="BuyCenter.moonpay.Title" translatable="false" tools:ignore="MissingTranslation">Moonpay</string>
-    <string name="BuyCenter.moonpay.FinancialDetails">"• Buy LTC with many fiat pairs\n• Pay with multiple methods\n• Global payment provider"</string>
+    <string name="BuyCenter.moonpay.FinancialDetails">"• Buy AETH with many fiat pairs\n• Pay with multiple methods\n• Global payment provider"</string>
 
     <string name="BuyCenter.bitrefill.Title" tools:ignore="MissingTranslation">Bitrefill</string>
     <string name="BuyCenter.bitrefill.FinancialDetails">"• Buy gift cards\n• Refill prepaid phones\n• Steam, Amazon, Hotels.com\n• Works in 170 countries"</string>
@@ -747,18 +747,18 @@
     <!-- Balance -->
     <string name="ManageWallet.balance">Balance</string>
 
-  <string name="Login.ltcPrice" translatable="false">1 LTC = %1$s</string>
-  <string name="Login.currentLtcPrice">Current LTC value in %1$s</string>
+  <string name="Login.AETHPrice" translatable="false">1 AETH = %1$s</string>
+  <string name="Login.currentAETHPrice">Current AETH value in %1$s</string>
   <string name="Settings.languages">Languages</string>
   <string name="Settings.ChangeLanguage.alertMessage">Are you sure you want to change the language to English?</string>
   <string name="JailbreakWarnings.close">Close</string>
 
   <!-- donation dialog -->
-  <string name="Donate.Dialog.title">Donate to the Litecoin Foundation</string>
-  <string name="Donate.Dialog.message">We appreciate your donation to the Litecoin Foundation. Donations are final and can not be refunded. Thanks for your continuing support.</string>
+  <string name="Donate.Dialog.title">Donate to the Aetheris Foundation</string>
+  <string name="Donate.Dialog.message">We appreciate your donation to the Aetheris Foundation. Donations are final and can not be refunded. Thanks for your continuing support.</string>
   <string name="Donate.Dialog.Positive.text">Donate</string>
   <string name="Donate.Dialog.Negative.text">Cancel</string>
-  <string name="Donate.toThe.LWTeam">Donate to: Litewallet Infrastructure</string>
+  <string name="Donate.toThe.LWTeam">Donate to: Aetheris Wallet Infrastructure</string>
   <string name="About.Instagram" translatable="false">Instagram</string>
   <string name="seed_phrase.label" translatable="false">1: %s 2: %s 3: %s 4: %s \\n5: %s 6: %s 7: %s 8: %s%s \\n9: %s 10: %s 11: %s 12: %s  %s</string>
   <string name="show_seed_label">Show</string>
@@ -767,19 +767,19 @@
   <string name="radio_low_privacy">Low privacy (~45 minutes)</string>
   <string name="radio_semi_private">Semi-private (~60 minutes)</string>
   <string name="radio_anonymous">Anonymous (~77 minutes)</string>
-  <string name="release_notes">IMPORTANT: App will sync to allow 1ltc addresses. Wait ~1 hour for syncing!</string>
+  <string name="release_notes">IMPORTANT: App will sync to allow aeth1 addresses. Wait ~1 hour for syncing!</string>
 
   <!-- Announce Updates View -->
   <string name="Announce.title">Don\'t miss a thing!</string>
   <string name="Announce.close">Close</string>
-  <string name="Announce.description">Signup to hear about updates and contests from the Litewallet team! Accept notifications to get live news, price, \u0026 market information!</string>
+  <string name="Announce.description">Signup to hear about updates and contests from the Aetheris Wallet team! Accept notifications to get live news, price, \u0026 market information!</string>
   <string name="Announce.no_thanks">No, thanks!</string>
     <string name="Fees.Service">Service</string>
     <string name="ConfirmationAllFees.Label">Fees:</string>
 
   <string name="notification_channel_name_general" translatable="false">General</string>
-  <string name="notification_channel_name_litecoin_news" translatable="false">Litecoin News</string>
-  <string name="notification_channel_name_litewallet_update" translatable="false">Litewallet Update</string>
+  <string name="notification_channel_name_litecoin_news" translatable="false">Aetheris News</string>
+  <string name="notification_channel_name_aetheris_wallet_update" translatable="false">Aetheris Wallet Update</string>
   <string name="cancel">Cancel</string>
   <string name="ok">Ok</string>
   <string name="please_grant_notification_permission">Please grant notification permission</string>

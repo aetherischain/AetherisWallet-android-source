@@ -5,14 +5,46 @@
     android:id="@+id/activity_pit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/litecoin_litewallet_dark_blue"
+    android:background="@android:color/black"
     tools:context="com.breadwallet.presenter.activities.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/branding_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/BRBoldTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aetheris (AETH)"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <TextView
+            style="@style/BRTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Scrypt PoW/POS"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:alpha="0.8" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ltcPriceConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/litecoin_litewallet_dark_blue">
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/branding_layout">
 
         <TextView
             android:id="@+id/ltcPriceTextView"
@@ -54,65 +86,30 @@
 
     <ImageView
         android:id="@+id/title"
-        android:layout_width="186dp"
-        android:layout_height="48dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/litewallet_logotype_white"
+        android:visibility="gone"
+        android:src="@drawable/aetheris_icon"
         app:layout_constraintBottom_toTopOf="@+id/deprecation_warning"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ltcPriceConstraintLayout"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.2" />
 
-    <androidx.cardview.widget.CardView
+    <!-- Deprecation warning removed -->
+    <View
         android:id="@+id/deprecation_warning_card"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintBottom_toTopOf="@+id/enter_pin_label">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/deprecation_warning_bg"
-            android:minHeight="60dp"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="top"
-                android:src="@drawable/ic_error_outline_black_24dp"
-                android:tint="#FFCC00" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/barlowsemicondensed_semibold"
-                android:lineSpacingExtra="3dp"
-                android:text="Litewallet is no longer being maintained, please upgrade to Nexus Wallet for Litecoin"
-                android:textColor="#FFCC00"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/scanQRCodeImgBut"

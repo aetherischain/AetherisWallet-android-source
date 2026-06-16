@@ -26,7 +26,7 @@ public class BRCurrency {
         Currency currency;
         String symbol;
         decimalFormatSymbols = currencyFormat.getDecimalFormatSymbols();
-        if (Objects.equals(isoCurrencyCode, "LTC")) {
+        if (Objects.equals(isoCurrencyCode, "AETH")) {
             symbol = BRExchange.getLitecoinSymbol(app);
         } else {
             try {
@@ -47,7 +47,7 @@ public class BRCurrency {
 
     public static String getSymbolByIso(Context app, String iso) {
         String symbol;
-        if (Objects.equals(iso, "LTC")) {
+        if (Objects.equals(iso, "AETH")) {
             String currencySymbolString = BRConstants.litecoinLowercase;
             if (app != null) {
                 int unit = BRSharedPrefs.getCurrencyUnit(app);
@@ -78,7 +78,7 @@ public class BRCurrency {
 
     //for now only use for BTC and Bits
     public static String getCurrencyName(Context app, String iso) {
-        if (Objects.equals(iso, "LTC")) {
+        if (Objects.equals(iso, "AETH")) {
             if (app != null) {
                 int unit = BRSharedPrefs.getCurrencyUnit(app);
                 switch (unit) {
@@ -87,7 +87,7 @@ public class BRCurrency {
                     case BRConstants.CURRENT_UNIT_LITES:
                         return "MBits";
                     case BRConstants.CURRENT_UNIT_LITECOINS:
-                        return "LTC";
+                        return "AETH";
                 }
             }
         }
@@ -97,7 +97,7 @@ public class BRCurrency {
     public static int getMaxDecimalPlaces(String iso) {
         if (Utils.isNullOrEmpty(iso)) return 8;
 
-        if (iso.equalsIgnoreCase("LTC")) {
+        if (iso.equalsIgnoreCase("AETH")) {
             return 8;
         } else {
             Currency currency = Currency.getInstance(iso);

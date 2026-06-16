@@ -278,7 +278,7 @@ public class FragmentReceive extends Fragment {
                                         mAddress.setText(receiveAddress);
                                         boolean generated = QRUtils.generateQR(
                                             ctx,
-                                            "litecoin:" + receiveAddress,
+                                            "aetheris:" + receiveAddress,
                                             mQrImage
                                         );
                                         if (

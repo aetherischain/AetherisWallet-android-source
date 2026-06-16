@@ -187,7 +187,7 @@ public class Utils {
         String rURL
     ) {
         Uri.Builder builder = new Uri.Builder();
-        builder = builder.scheme("litecoin");
+        builder = builder.scheme("aetheris");
         if (address != null && !address.isEmpty()) builder = builder.appendPath(
             address
         );

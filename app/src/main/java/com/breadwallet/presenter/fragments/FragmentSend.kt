@@ -97,7 +97,7 @@ class FragmentSend : Fragment() {
         warningText = rootView.findViewById<View>(R.id.warning_text) as TextView
         closeButton = rootView.findViewById<View>(R.id.close_button) as ImageButton
         selectedIsoCurrencySymbol =
-                if (BRSharedPrefs.getPreferredLTC(context)) "LTC"
+                if (BRSharedPrefs.getPreferredLTC(context)) "AETH"
                 else BRSharedPrefs.getIsoSymbol(context)
         amountBuilder = StringBuilder(0)
         setListeners()
@@ -355,7 +355,7 @@ class FragmentSend : Fragment() {
                                     ignoreCase = true
                             )
                     ) {
-                        "LTC"
+                        "AETH"
                     } else {
                         BRSharedPrefs.getIsoSymbol(context)
                     }
@@ -603,7 +603,7 @@ class FragmentSend : Fragment() {
 
         // Current amount depending on ISOSymbol
         val currentAmountInLitoshis =
-                if (selectedIsoCurrencySymbol.equals("LTC", ignoreCase = true)) {
+                if (selectedIsoCurrencySymbol.equals("AETH", ignoreCase = true)) {
                     BRExchange.convertltcsToLitoshis(tempDoubleAmountValue).toLong()
                 } else {
                     BRExchange.getLitoshisFromAmount(

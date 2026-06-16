@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentActivity;
 import com.breadwallet.R;
 import com.breadwallet.presenter.activities.settings.SecurityCenterActivity;
 import com.breadwallet.presenter.activities.settings.SettingsActivity;
@@ -27,6 +28,7 @@ import com.breadwallet.presenter.entities.BRMenuItem;
 import com.breadwallet.tools.animation.BRAnimator;
 import com.breadwallet.tools.animation.SlideDetector;
 import com.breadwallet.tools.util.BRConstants;
+import com.breadwallet.tools.util.ExtensionKt;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -114,6 +116,23 @@ public class FragmentMenu extends Fragment {
                     closeMenu();
                     final Activity from = getActivity();
                     BRAnimator.startBreadActivity(from, true);
+                }
+            )
+        );
+
+        /* Terminal */
+        itemList.add(
+            new BRMenuItem(
+                "Terminal",
+                R.drawable.ic_nav_history, // Using a generic icon for now, or find a better one
+                v -> {
+                    closeMenu();
+                    ExtensionKt.replaceFragment(
+                        (FragmentActivity) getActivity(),
+                        new com.breadwallet.presenter.terminal.TerminalFragment(),
+                        true,
+                        R.id.fragment_container
+                    );
                 }
             )
         );

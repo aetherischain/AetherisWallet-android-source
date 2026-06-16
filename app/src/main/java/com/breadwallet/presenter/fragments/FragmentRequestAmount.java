@@ -109,7 +109,7 @@ public class FragmentRequestAmount extends Fragment {
         signalLayout.removeView(request);
 
         showCurrencyList(false);
-        selectedIso = BRSharedPrefs.getPreferredLTC(getContext()) ? "LTC" : BRSharedPrefs.getIsoSymbol(getContext());
+        selectedIso = BRSharedPrefs.getPreferredLTC(getContext()) ? "AETH" : BRSharedPrefs.getIsoSymbol(getContext());
 
         signalLayout.setOnClickListener(v -> {
 //                removeCurrencySelector();
@@ -189,7 +189,7 @@ public class FragmentRequestAmount extends Fragment {
 
         isoButton.setOnClickListener(v -> {
             if (selectedIso.equalsIgnoreCase(BRSharedPrefs.getIsoSymbol(getContext()))) {
-                selectedIso = "LTC";
+                selectedIso = "AETH";
             } else {
                 selectedIso = BRSharedPrefs.getIsoSymbol(getContext());
             }
@@ -244,7 +244,7 @@ public class FragmentRequestAmount extends Fragment {
                     @Override
                     public void run() {
                         mAddress.setText(receiveAddress);
-                        boolean generated = generateQrImage(receiveAddress, "0", "LTC");
+                        boolean generated = generateQrImage(receiveAddress, "0", "AETH");
                         if (!generated)
                             throw new RuntimeException("failed to generate qr image for address");
                     }
@@ -338,7 +338,7 @@ public class FragmentRequestAmount extends Fragment {
             String am = new BigDecimal(amount).divide(new BigDecimal(100000000), 8, BRConstants.ROUNDING_MODE).toPlainString();
             amountArg = "?amount=" + am;
         }
-        return QRUtils.generateQR(getActivity(), "litecoin:" + address + amountArg, mQrImage);
+        return QRUtils.generateQR(getActivity(), "aetheris:" + address + amountArg, mQrImage);
     }
 
 

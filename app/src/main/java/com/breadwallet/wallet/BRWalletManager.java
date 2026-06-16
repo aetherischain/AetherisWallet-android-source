@@ -538,7 +538,7 @@ public class BRWalletManager {
                         public void run() {
                             String am = BRCurrency.getFormattedCurrencyString(
                                 ctx,
-                                "LTC",
+                                "AETH",
                                 BRExchange.getLitecoinForLitoshis(
                                     ctx,
                                     new BigDecimal(amount)
@@ -609,7 +609,9 @@ public class BRWalletManager {
                                         R.raw.coinflip
                                     );
                                     if (mp != null) try {
+                                        mp.setVolume(1.0f, 1.0f);
                                         mp.start();
+                                        mp.setOnCompletionListener(MediaPlayer::release);
                                     } catch (IllegalArgumentException ex) {
                                         Timber.e(ex, "run: ");
                                     }

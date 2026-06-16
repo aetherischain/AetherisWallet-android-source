@@ -104,9 +104,9 @@ public class BitcoinUrlHandler {
 
         String tmp = str.trim().replaceAll("\n", "").replaceAll(" ", "%20");
 
-        if (!tmp.startsWith("litecoin://")) {
-            if (!tmp.startsWith("litecoin:")) tmp = "litecoin://".concat(tmp);
-            else tmp = tmp.replace("litecoin:", "litecoin://");
+        if (!tmp.startsWith("aetheris://")) {
+            if (!tmp.startsWith("aetheris:")) tmp = "aetheris://".concat(tmp);
+            else tmp = tmp.replace("aetheris:", "aetheris://");
         }
         URI uri;
         try {

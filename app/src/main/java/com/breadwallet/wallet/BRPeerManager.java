@@ -300,4 +300,6 @@ public class BRPeerManager {
     public native long getLastBlockTimestamp();
 
     public native void rescan();
+
+    public native PeerEntity[] getConnectedPeers();
 }

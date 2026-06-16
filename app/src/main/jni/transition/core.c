@@ -59,11 +59,11 @@ Java_com_breadwallet_tools_security_BitcoinUrlHandler_parsePaymentRequest(JNIEnv
 
     __android_log_print(ANDROID_LOG_DEBUG, "parsePaymentRequest",
                         "nativeRequest->details->network: %s, "
-                                "LITECOIN_TESTNET: %d", nativeRequest->details->network,
-                        LITECOIN_TESTNET);
+                                "AETHERIS_TESTNET: %d", nativeRequest->details->network,
+                        AETHERIS_TESTNET);
 
-    if ((strcmp(nativeRequest->details->network, "main") == 0 && LITECOIN_TESTNET == 1) ||
-        (strcmp(nativeRequest->details->network, "main") != 0 && LITECOIN_TESTNET == 0)) {
+    if ((strcmp(nativeRequest->details->network, "main") == 0 && AETHERIS_TESTNET == 1) ||
+        (strcmp(nativeRequest->details->network, "main") != 0 && AETHERIS_TESTNET == 0)) {
         (*env)->SetIntField(env, entity, jerror, 3);
         return entity;
     }

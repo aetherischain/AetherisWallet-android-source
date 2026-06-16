@@ -57,38 +57,80 @@ public class BRApiManager {
         Set<CurrencyEntity> set = new LinkedHashSet<>();
         try {
             JSONArray arr = fetchRates(context);
+            
+            // Try to get AETH price from QuTrade
+            double aethUsdPrice = fetchAethPriceFromQuTrade(context);
+            
             FeeManager.updateFeePerKb(context);
+            
             if (arr != null) {
-                String selectedISO = BRSharedPrefs.getIsoSymbol(context);
                 int length = arr.length();
                 for (int i = 0; i < length; i++) {
                     CurrencyEntity tmp = new CurrencyEntity();
                     try {
                         JSONObject tmpObj = (JSONObject) arr.get(i);
-                        tmp.name = tmpObj.getString("code");
                         tmp.code = tmpObj.getString("code");
+                        tmp.name = tmp.code;
                         tmp.rate = (float) tmpObj.getDouble("n");
-                        if (tmp.code.equalsIgnoreCase(selectedISO)) {
-                            BRSharedPrefs.putIso(context, tmp.code);
-                            BRSharedPrefs.putCurrencyListPosition(
-                                context,
-                                i - 1
-                            );
+                        
+                        // Override with QuTrade price if it's USD
+                        if (tmp.code.equalsIgnoreCase("USD") && aethUsdPrice > 0) {
+                            tmp.rate = (float) aethUsdPrice;
                         }
                     } catch (JSONException e) {
                         Timber.e(e);
                     }
                     set.add(tmp);
                 }
-            } else {
-                Timber.d("timber: getCurrencies: failed to get currencies");
             }
+
+            // Always ensure USD and USDT are present with QuTrade prices
+            if (aethUsdPrice > 0) {
+                boolean foundUsd = false;
+                boolean foundUsdt = false;
+                for (CurrencyEntity c : set) {
+                    if (c.code.equalsIgnoreCase("USD")) {
+                        c.rate = (float) aethUsdPrice;
+                        foundUsd = true;
+                    }
+                    if (c.code.equalsIgnoreCase("USDT")) {
+                        c.rate = (float) aethUsdPrice;
+                        foundUsdt = true;
+                    }
+                }
+                
+                if (!foundUsd) {
+                    CurrencyEntity usd = new CurrencyEntity();
+                    usd.code = "USD";
+                    usd.name = "US Dollar";
+                    usd.rate = (float) aethUsdPrice;
+                    set.add(usd);
+                }
+                
+                if (!foundUsdt) {
+                    CurrencyEntity usdt = new CurrencyEntity();
+                    usdt.code = "USDT";
+                    usdt.name = "Tether";
+                    usdt.rate = (float) aethUsdPrice;
+                    set.add(usdt);
+                }
+            }
+
+            // Update selected currency position if needed
+            String selectedISO = BRSharedPrefs.getIsoSymbol(context);
+            int pos = 0;
+            for (CurrencyEntity c : set) {
+                if (c.code.equalsIgnoreCase(selectedISO)) {
+                    BRSharedPrefs.putCurrencyListPosition(context, pos);
+                    break;
+                }
+                pos++;
+            }
+
         } catch (Exception e) {
             Timber.e(e);
         }
-        List tempList = new ArrayList<>(set);
-        Collections.reverse(tempList);
-        return new LinkedHashSet<>(set);
+        return set;
     }
 
     private void initializeTimerTask(final Context context) {
@@ -149,10 +191,12 @@ public class BRApiManager {
         JSONArray jsonArray = null;
         if (jsonString == null) return null;
         try {
-            jsonArray = new JSONArray(jsonString);
-            // DEV Uncomment to view values
-            // Timber.d("timber: JSON %s",jsonArray.toString());
-
+            String trimmedJson = jsonString.trim();
+            if (trimmedJson.startsWith("[")) {
+                jsonArray = new JSONArray(trimmedJson);
+            } else {
+                Timber.d("timber: fetchRates: Unexpected response: %s", jsonString);
+            }
         } catch (JSONException ex) {
             Timber.e(ex);
         }
@@ -168,11 +212,32 @@ public class BRApiManager {
         JSONArray jsonArray = null;
         if (jsonString == null) return null;
         try {
-            jsonArray = new JSONArray(jsonString);
+            String trimmedJson = jsonString.trim();
+            if (trimmedJson.startsWith("[")) {
+                jsonArray = new JSONArray(trimmedJson);
+            } else {
+                Timber.d("timber: backupFetchRates: Unexpected response: %s", jsonString);
+            }
         } catch (JSONException e) {
             Timber.e(e);
         }
         return jsonArray;
+    }
+
+    public static double fetchAethPriceFromQuTrade(Context app) {
+        String response = createGETRequestURL(app, QUTRADE_API_URL);
+        if (response == null) return 0;
+        try {
+            JSONObject obj = new JSONObject(response);
+            if (obj.getString("result").equalsIgnoreCase("success")) {
+                JSONObject list = obj.getJSONObject("list");
+                JSONObject pair = list.getJSONObject("aeth_usdt");
+                return pair.getDouble("price");
+            }
+        } catch (JSONException e) {
+            Timber.e(e);
+        }
+        return 0;
     }
 
     // createGETRequestURL
@@ -196,8 +261,8 @@ public class BRApiManager {
         );
 
         try {
-            if (resp == null) {
-                Timber.i("timber: urlGET: %s resp is null", myURL);
+            if (resp == null || !resp.isSuccessful()) {
+                Timber.i("timber: urlGET: %s resp is null or not successful", myURL);
                 return null;
             }
             response = resp.body().string();

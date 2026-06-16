@@ -233,10 +233,10 @@ public class LoginActivity extends BRActivity {
 
         if (formattedCurrency != null) {
             ltcPriceTextView.setText(
-                getString(R.string.Login_ltcPrice, formattedCurrency)
+                getString(R.string.Login_AETHPrice, formattedCurrency)
             );
             ltcPriceDescTextView.setText(
-                getString(R.string.Login_currentLtcPrice, iso)
+                getString(R.string.Login_currentAETHPrice, iso)
             );
         }
     }
