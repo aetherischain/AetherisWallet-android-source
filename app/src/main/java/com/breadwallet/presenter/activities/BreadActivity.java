@@ -303,7 +303,7 @@ public class BreadActivity
         } else if (menuItemId == R.id.nav_buy) {
             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
             CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(this, Uri.parse("https://qutrade.io"));
+            customTabsIntent.launchUrl(this, Uri.parse("https://qutrade.io/en/?market=aeth_usdt"));
             return false;
         } else if (menuItemId == R.id.nav_stake) {
             Toast.makeText(this, "Coming soon - Still working on it", Toast.LENGTH_SHORT).show();

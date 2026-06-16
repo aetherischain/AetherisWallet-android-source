@@ -100,7 +100,7 @@ public class BRConstants {
     public static final String WEB_LINK = "https://aetherischain.com";
     public static final String TOS_LINK = "https://aetherischain.com/privacy";
     public static String CUSTOMER_SUPPORT_LINK =
-        "https://aetherischain.com/support";
+        "https://aetherischain.com/contacts/";
     public static String BITREFILL_AFFILIATE_LINK =
         "https://www.bitrefill.com/";
 
