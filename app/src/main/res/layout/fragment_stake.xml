@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/extra_light_blue_background"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/stake_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/barlowsemicondensed_bold"
+        android:text="Aetheris Staking"
+        android:textColor="@color/litecoin_litewallet_blue"
+        android:textSize="28sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staking Status"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/staking_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Inactive"
+                android:textColor="@color/red_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#EEEEEE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Staked Balance"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/staked_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0.00 AETH"
+                android:textColor="@color/almost_black"
+                android:textSize="24sp"
+                android:fontFamily="@font/barlowsemicondensed_medium" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staker Address (Hot Wallet)"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/staker_address_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Enter staker address"
+                android:textSize="16sp"
+                android:background="@null"
+                android:inputType="text" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Earn up to 5% APY by staking your Aetheris. Your coins remain under your control."
+        android:textColor="@color/light_gray"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/button_stake"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/b_blue"
+        android:text="Start Staking"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_unstake"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/b_blue_stroke"
+        android:text="Unstake"
+        android:textColor="@color/litecoin_litewallet_blue"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:visibility="gone" />
+
+</LinearLayout>

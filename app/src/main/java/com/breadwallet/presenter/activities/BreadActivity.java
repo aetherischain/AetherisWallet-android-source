@@ -306,8 +306,12 @@ public class BreadActivity
             customTabsIntent.launchUrl(this, Uri.parse("https://qutrade.io/en/?market=aeth_usdt"));
             return false;
         } else if (menuItemId == R.id.nav_stake) {
-            Toast.makeText(this, "Coming soon - Still working on it", Toast.LENGTH_SHORT).show();
-            return false;
+            ExtensionKt.replaceFragment(
+                BreadActivity.this,
+                new com.breadwallet.presenter.fragments.FragmentStake(),
+                false,
+                R.id.fragment_container
+            );
         }
         return true;
     }

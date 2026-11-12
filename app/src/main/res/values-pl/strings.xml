@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="MenuViewController.createButton">Utwórz nowy portfel</string>
+    <string name="RecoverWallet.header">Odzyskaj portfel</string>
+    <string name="StartViewController.message">Kontroluj swoje środki. Wysyłaj, odbieraj i trzymaj Aetheris szybko, łatwo i bezpiecznie.</string>
+    <string name="About.appVersion">%1$s</string>
+</resources>

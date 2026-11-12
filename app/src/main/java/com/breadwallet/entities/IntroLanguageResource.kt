@@ -12,7 +12,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.ENGLISH.code,
                 Language.ENGLISH.title,
-                "The most secure and safest way to use Litecoin.",
+                "The most secure and safest way to use Aetheris.",
                 R.raw.english,
                 "Are you sure you want to change the language to English?",
                 Language.ENGLISH
@@ -20,7 +20,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.SPANISH.code,
                 Language.SPANISH.title,
-                "La forma más segura de usar Litecoin.",
+                "La forma más segura de usar Aetheris.",
                 R.raw.spanish,
                 "¿Estás seguro de que quieres cambiar el idioma a español?",
                 Language.SPANISH,
@@ -28,7 +28,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.INDONESIAN.code,
                 Language.INDONESIAN.title,
-                "Cara paling aman dan teraman untuk menggunakan Litecoin.",
+                "Cara paling aman dan teraman untuk menggunakan Aetheris.",
                 R.raw.bahasaindonesia,
                 "Yakin ingin mengubah bahasanya ke bahasa Indonesia?",
                 Language.INDONESIAN
@@ -36,7 +36,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.GERMAN.code,
                 Language.GERMAN.title,
-                "Die sicherste Option zur Nutzung von Litecoin.",
+                "Die sicherste Option zur Nutzung von Aetheris.",
                 R.raw.deutsch,
                 "Sind Sie sicher, dass Sie die Sprache auf Deutsch ändern möchten?",
                 Language.GERMAN
@@ -44,7 +44,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.UKRAINIAN.code,
                 Language.UKRAINIAN.title,
-                "Найбезпечніший і найбезпечніший спосіб використання Litecoin.",
+                "Найбезпечніший і найбезпечніший спосіб використання Aetheris.",
                 R.raw.ukrainian,
                 "Ви впевнені, що хочете змінити мову на українську?",
                 Language.UKRAINIAN
@@ -52,7 +52,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.CHINESE_TRADITIONAL.code,
                 Language.CHINESE_TRADITIONAL.title,
-                "使用萊特幣最安全、最有保障的方式。",
+                "使用 Aetheris 最安全、最有保障的方式。",
                 R.raw.traditionalchinese,
                 "您確定要將語言改為中文嗎？",
                 Language.CHINESE_TRADITIONAL
@@ -60,7 +60,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.ITALIAN.code,
                 Language.ITALIAN.title,
-                "Il modo più sicuro per usare i Litecoin.",
+                "Il modo più sicuro per usare i Aetheris.",
                 R.raw.italiano,
                 "Sei sicuro di voler cambiare la lingua in italiano?",
                 Language.ITALIAN
@@ -68,7 +68,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.KOREAN.code,
                 Language.KOREAN.title,
-                "Litecoin을 사용하는 가장 안정되고 안전한 방법.",
+                "Aetheris을 사용하는 가장 안정되고 안전한 방법.",
                 R.raw.korean,
                 "언어를 한국어로 변경하시겠습니까?",
                 Language.KOREAN
@@ -76,7 +76,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.FRENCH.code,
                 Language.FRENCH.title,
-                "La façon la plus sécurisée et sûre d'utiliser Litecoin.",
+                "La façon la plus sécurisée et sûre d'utiliser Aetheris.",
                 R.raw.french,
                 "Êtes-vous sûr de vouloir changer la langue en français ?",
                 Language.FRENCH
@@ -84,7 +84,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.TURKISH.code,
                 Language.TURKISH.title,
-                "Litecoin'i kullanmanın en güvenli ve en güvenli yolu.",
+                "Aetheris'i kullanmanın en güvenli ve en güvenli yolu.",
                 R.raw.turkish,
                 "Dili türkçeye değiştirmek istediğinizden emin misiniz?",
                 Language.TURKISH
@@ -92,7 +92,7 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.JAPANESE.code,
                 Language.JAPANESE.title,
-                "最も安全にリテコインを使う手段。",
+                "最も安全に Aetheris を使う手段。",
                 R.raw.japanese,
                 "言語を日本語に変更してもよろしいですか?",
                 Language.JAPANESE
@@ -100,15 +100,15 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.PORTUGUESE.code,
                 Language.PORTUGUESE.title,
-                "A forma mais protegida e segura de utilizar a Litecoin.",
+                "A forma mais protegida e segura de utilizar a Aetheris.",
                 R.raw.portugues,
                 "Tem certeza de que deseja alterar o idioma para português?",
                 Language.PORTUGUESE
             ),
             IntroLanguage(
-                Language.PORTUGUESE.code,
+                Language.RUSSIAN.code,
                 Language.RUSSIAN.title,
-                "Самый надежный и безопасный способ использования биткойна.",
+                "Самый надежный и безопасный способ использования Aetheris.",
                 R.raw.russian,
                 "Вы уверены, что хотите сменить язык на русский?",
                 Language.RUSSIAN
@@ -116,10 +116,18 @@ class IntroLanguageResource {
             IntroLanguage(
                 Language.ARABIC.code,
                 Language.ARABIC.title,
-                "حدد مناقشة الطريقة الأكثر أمانًا وأمانًا لاستخدام Litecoin.",
+                "حدد مناقشة الطريقة الأكثر أمانًا وأمانًا لاستخدام Aetheris.",
                 R.raw.arabic,
-                "هل أنت متأكد أنك تريد تغيير اللغة إلى الإندونيسية؟",
+                "هل أنت متأكد أنك تريد تغيير اللغة إلى العربية؟",
                 Language.ARABIC
+            ),
+            IntroLanguage(
+                Language.POLISH.code,
+                Language.POLISH.title,
+                "Najbezpieczniejszy i najpewniejszy sposób korzystania z Aetheris.",
+                R.raw.english,
+                "Czy na pewno chcesz zmienić język na polski?",
+                Language.POLISH
             )
         )
     }

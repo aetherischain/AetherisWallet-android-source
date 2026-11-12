@@ -902,6 +902,12 @@ public class BRWalletManager {
         long amountHolder
     );
 
+    public native byte[] tryStakingTransaction(
+        String ownerAddress,
+        String stakerAddress,
+        long amount
+    );
+
     // returns the given amount (amount is in satoshis) in local currency units (i.e. pennies, pence)
     // price is local currency units per bitcoin
     public native long localAmount(long amount, double price);
@@ -951,6 +957,8 @@ public class BRWalletManager {
     public native String txHashToHex(byte[] txHash);
 
     public native long nativeBalance();
+
+    public native long stakedBalance();
 
     public native long defaultFee();
 

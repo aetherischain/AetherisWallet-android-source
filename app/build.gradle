@@ -67,8 +67,8 @@ android {
         applicationId = 'com.aetheriswallet'
         minSdkVersion 29
         targetSdkVersion 34
-        versionCode 20250615
-        versionName "v1.0.1(BETA2)"
+        versionCode 20250617
+        versionName "v1.0.1(BETA4)"
         multiDexEnabled true
         archivesBaseName = "${versionName}(${versionCode})"
 
